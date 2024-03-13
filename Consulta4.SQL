@@ -4,3 +4,4 @@ from poliza
 inner join valorpoliza
 on valorpoliza.id_poliza= poliza.id
 group by poliza.fechafin;
+ORDER BY poliza.fechafin ASC;
