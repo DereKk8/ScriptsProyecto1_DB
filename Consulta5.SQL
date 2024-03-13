@@ -1,5 +1,5 @@
 create view ParticipacionDepartamento as
-select A.nombre, (A.parcial/A.total) as participacion
+select A.nombre, (A.parcial/A.total)*100 as participacion
 from (
 select T.nombre, T.cedulas as parcial, sum(T.cedulas) over () as total
 from( 
