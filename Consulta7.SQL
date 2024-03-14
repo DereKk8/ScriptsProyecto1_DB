@@ -1,5 +1,5 @@
 create view consulta7 as
-select Masc.nombre, femen.nfemenino as Numero_total_de_tomadores_que_son_mujeres, masc.nmasculino as Numero_total_de_tomadores_que_son_hombres, (femen.nfemenino+masc.nmasculino) as total
+select Masc.nombre, femen.nfemenino as Mujeres, masc.nmasculino as Hombres, (femen.nfemenino+masc.nmasculino) as total
 from
 (select departamento.nombre, count( distinct tomador.cedula) as nfemenino
 from departamento
